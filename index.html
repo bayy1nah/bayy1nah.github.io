@@ -1,27 +1,18 @@
-<!DOCTYPE>
-<html>
-  <head>
-    <title>Hidayah</title>
-    <script src="jplayer.js"></script>
-  </head>
-  <body>
-    <h1>Hidayah</h1>
-
-    <div id="player"></div>
-    <script type="text/javascript">
-      var playerInstance = jwplayer("player");
-      playerInstance.setup({
-        primary: 'html5',
-        playlist: [{
-          sources: [{
-            file: "https://edge.mixlr.com/channel/qouio",
-            type: 'mp3'
-          }]
-        }],
-        width: 480,
-        height: 40
-      });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hidayah</title>
+    <link rel="stylesheet" href="plyr.css" />
+</head>
+<body>
+    <audio id="player" controls>
+        <source src="https://edge.mixlr.com/channel/qouio" type="audio/mp3">
+    </audio>
+    <script src="path/to/plyr.js"></script>
+    <script>
+    const player = new Plyr('#player');
     </script>
-
-  </body>
+</body>
 </html>
