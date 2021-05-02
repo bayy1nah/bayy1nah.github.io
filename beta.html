@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hidayah</title>
+    <style>
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%;}
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eee;
+            width: 100%;
+            height: 100%;
+        }
+        .player {
+            width: 330px;
+            height: 120px;
+            background: #333;
+            border-radius: 10px;
+        }
+        .btn-playtoggle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            background: #444;
+            margin: 22px 0 0 20px;
+            position: relative;
+        }
+
+        .btn-playtoggle:hover {
+            background: #222;
+        }
+
+        .btn-playtoggle img {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <audio controls src="https://www.radioking.com/play/hidayah" type="audio/mp3"></audio>
+        <div class="player">
+            <div class="btn-playtoggle">
+                <img src="btnPlay.png" alt="play" />
+            </div>
+        </div>
+    </div>
+    <script>
+        let toggleFlag = false;
+        let player = document.querySelector("audio");
+        let btnPlayToggle = document.querySelector(".btn-playtoggle");
+        let btnPlay = btnPlayToggle.querySelector("img");
+
+        btnPlayToggle.addEventListener('click', () => {
+            toggleFlag = toggleFlag ? false : true;
+            if (toggleFlag) {
+                player.src = 'https://www.radioking.com/play/hidayah';
+                player.play();
+                btnPlay.src = 'btnPause.png';
+                console.log("Play");
+            } else {
+                player.pause();
+                player.src = null;
+                btnPlay.src = 'btnPlay.png';
+                console.log("Pause");
+
+            }
+
+        });
+    </script>
+</body>
+</html>
