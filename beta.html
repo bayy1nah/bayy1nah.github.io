@@ -17,7 +17,7 @@
         }
         .player {
             width: 330px;
-            height: 120px;
+            height: 100px;
             background: #333;
             border-radius: 10px;
         }
@@ -26,7 +26,7 @@
             height: 70px;
             border-radius: 50px;
             background: #444;
-            margin: 22px 0 0 20px;
+            margin: 16px 0 0 20px;
             position: relative;
         }
 
@@ -34,20 +34,27 @@
             background: #222;
         }
 
-        .btn-playtoggle img {
-            position: relative;
+        .btn-playtoggle .btn {
+            position: absolute;
             top: 10px;
             left: 10px;
+        }
+
+        .btn-playtoggle .logo {
+            position: absolute;
+            top: -55px;
+            left: 220px;
         }
         
     </style>
 </head>
 <body>
     <div class="container">
-        <audio src="https://www.radioking.com/play/hidayah" type="audio/mp3"></audio>
+        <audio controls src="https://www.radioking.com/play/hidayah" type="audio/mp3"></audio>
         <div class="player">
             <div class="btn-playtoggle">
-                <img src="btnPlay.png" alt="play" />
+                <img class="btn" src="btnPlay.png" alt="play" >
+                <img class="logo" src="logo.png" alt="logo" >
             </div>
         </div>
     </div>
