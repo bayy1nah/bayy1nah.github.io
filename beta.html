@@ -67,14 +67,14 @@
         btnPlayToggle.addEventListener('click', () => {
             toggleFlag = toggleFlag ? false : true;
             if (toggleFlag) {
-                player.src = 'https://www.radioking.com/play/hidayah';
-                player.play();
                 btnPlay.src = 'btnPause.png';
+                player.src = 'https://www.radioking.com/play/hidayah';
+                player.play();            
                 console.log("Play");
             } else {
+                btnPlay.src = 'btnPlay.png';
                 player.pause();
                 player.src = null;
-                btnPlay.src = 'btnPlay.png';
                 console.log("Pause");
 
             }
